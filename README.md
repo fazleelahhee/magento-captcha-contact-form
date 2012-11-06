@@ -1,4 +1,4 @@
-magento-captcha-contact-form
+Captcha for contact form
 ============================
 
-magento captcha for contact form
+Unzip files and drop them into Magento root directory. 
