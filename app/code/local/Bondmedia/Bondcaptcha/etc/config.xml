@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+    <config>
+        <modules>
+            <Bondmedia_Bondcaptcha>
+                <version>1.0.0</version>
+                <depends>
+                <!-- no dependencies -->
+                </depends>
+            </Bondmedia_Bondcaptcha>
+        </modules>
+        <frontend>
+                <routers>
+                        <bondcaptcha>
+                                <use>standard</use>
+                                <args>
+                                    <module>Bondmedia_Bondcaptcha</module>
+                                            <frontName>bondcaptcha</frontName>
+                                </args>
+                        </bondcaptcha>
+                        <contacts>
+                                <args>
+                                        <modules>
+                                            <Bondmedia_Bondcaptcha before="Mage_Contacts">Bondmedia_Bondcaptcha</Bondmedia_Bondcaptcha>
+                                        </modules>
+                                </args>
+                        </contacts>
+                </routers>
+
+                <layout>
+                        <updates>
+                                <bondcaptcha>
+                                            <file>bondcaptcha.xml</file>
+                                </bondcaptcha>
+                        </updates>
+                </layout>
+        </frontend>
+        <global>
+                <models />
+                <resources />
+                <extraconfig />
+                <blocks>
+                        <bondcaptcha>
+                                <class>Bondmedia_Bondcaptcha_Block</class>
+                        </bondcaptcha>
+                </blocks>
+                <helpers>
+                        <bondcaptcha>
+                                <class>Bondmedia_Bondcaptcha_Helper</class>
+                        </bondcaptcha>
+                </helpers>
+        </global>
+    </config>
